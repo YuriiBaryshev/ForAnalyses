@@ -39,7 +39,7 @@ void CStudent::SetName(char newName[])
 {
 	name=newName;
 }
-void CStudent::SetCourage(int c)
+void CStudent::SetCourage(short c)
 {
 	courage=c;
 }
