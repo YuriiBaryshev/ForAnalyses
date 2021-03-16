@@ -9,7 +9,6 @@ public:
 	CTeacher(void);
 public:
 	~CTeacher(void);
-	// it should be called "TimeOfWaiting"
 	void Potala(CStudent *st, discipline d, int labNumber);
 	void SetDiscipline(discipline d);
 	discipline GetDiscipline();
