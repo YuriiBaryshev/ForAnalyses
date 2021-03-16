@@ -13,7 +13,7 @@ public:
 	void Wait(void);
 	bool GetStatus(discipline, int labNumber);
 	void PassingTheLab(discipline, int labNumber);
-	void SetCourage(int);
+	void SetCourage(short);
 	int GetCurrentCourage();
 public :
 	long timeOfWaiting;
