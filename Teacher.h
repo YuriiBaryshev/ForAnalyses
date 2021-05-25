@@ -6,14 +6,15 @@
 class CTeacher
 {
 public:
-	CTeacher(void);
-public:
-	~CTeacher(void);
-	void Potala(CStudent *st, discipline d, int labNumber);
-	void SetDiscipline(discipline d);
+	CTeacher();
+	~CTeacher();
+	
+	void SetDiscipline(discipline course);
 	discipline GetDiscipline();
 	
-private :
+	void AcceptLab(CStudent *student, discipline currentCourse, int labNumber);
+	
+private:
 	short randNumber;
-	discipline current;
+	discipline course;
 };
