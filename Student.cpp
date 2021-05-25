@@ -1,18 +1,23 @@
 #include "StdAfx.h"
 #include "Student.h"
 
-CStudent::CStudent(void)
+CStudent::CStudent()
 {
-
+	courage = 0;
+	timeOfWaiting = 0;
+	name = "Unknown";
 }
 
-CStudent::CStudent(int c)
+CStudent::CStudent(short initialCourage)
 {
-	courage=c;
+	courage = initialCourage;
+	timeOfWaiting = 0;
+	name = "Unknown";
 }
 
 CStudent::~CStudent(void)
 {
+	
 }
 
 int CStudent::GetTime(void)
@@ -25,21 +30,22 @@ void CStudent::Wait(void)
 	timeOfWaiting++;
 }
 
-bool CStudent::GetStatus(discipline disciplineName, int labNumber)
+bool CStudent::GetStatus(discipline course, int labNumber)
 {
-	return isPassed[disciplineName][labNumber];
+	return isPassed[course][labNumber];
 }
 
-void CStudent::PassingTheLab(discipline disciplineName, int labNumber)
+void CStudent::PassingTheLab(discipline course, int labNumber)
 {
-	isPassed[disciplineName][labNumber]=true;
+	isPassed[course][labNumber] = true;
 }
 
 void CStudent::SetName(char newName[])
 {
-	name=newName;
+	name = newName;
 }
-void CStudent::SetCourage(short c)
+
+void CStudent::SetCourage(short newCourage)
 {
-	courage=c;
+	courage = newCourage;
 }
