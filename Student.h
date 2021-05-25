@@ -5,20 +5,25 @@ enum discipline {InformationalTechnologies=0, ProgrammingTechnologies=1, Physics
 class CStudent
 {
 public:
-	CStudent(void);
-	CStudent(int);
-public:
-	~CStudent(void);
-	int GetTime(void);
-	void Wait(void);
-	bool GetStatus(discipline, int labNumber);
-	void PassingTheLab(discipline, int labNumber);
-	void SetCourage(short);
-	int GetCurrentCourage();
-public :
+	CStudent();
+	CStudent(short initialCourage);
+	~CStudent();
+		
+	void SetCourage(short newCourage);
+	int GetCourage();
+	
+	void SetName(char newName[]);
+	char* GetName();
+	
+	int GetTime();
+	void Wait();
+	
+	bool GetStatus(discipline course, int labNumber);
+	void PassingTheLab(discipline course, int labNumber);
+	
+private:
 	long timeOfWaiting;
 	char *name;
 	bool isPassed[12][32];
-	void SetName(char newName[]);
 	short courage;
 };
